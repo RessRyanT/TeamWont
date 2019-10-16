@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class SpellManagerScript : MonoBehaviour
 {
+
+    public GameObject wizardObject;
+    // public int Gust
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        wizardObject = gameObject.GetComponentInParent<Wizard>().gameObject;
     }
 
     // Update is called once per frame
