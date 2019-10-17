@@ -57,8 +57,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ButtonHandler.cs" />
      <Compile Include="Assets\Scripts\InputManager.cs" />
+     <Compile Include="Assets\Scripts\LightningScript.cs" />
+     <Compile Include="Assets\Scripts\SpellManagerScript.cs" />
      <Compile Include="Assets\Scripts\Wizard.cs" />
-     <Compile Include="Assets\SpellManagerScript.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Profiles/wtw1820/source/repos/TeamWont/Ethtallion’s Journey/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

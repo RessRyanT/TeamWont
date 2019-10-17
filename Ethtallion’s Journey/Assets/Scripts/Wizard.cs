@@ -19,6 +19,8 @@ public class Wizard : MonoBehaviour
     public Rigidbody2D myRigidBody;
 
 
+    Vector2 modifier;
+
     
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,8 @@ public class Wizard : MonoBehaviour
         maxSpeed = 2f;
         direction = 1f;
         health = 10;
+
+        modifier = new Vector2(0,0);
     }
 
     // Update is called once per frame
@@ -54,12 +58,17 @@ public class Wizard : MonoBehaviour
 
         Vector2 velocity = new Vector2(speed * direction, 0);
 
-        
 
+        velocity = velocity + modifier;
 
 
         //Move the walker
         myRigidBody.velocity = velocity;
+    }
+
+    public void MovementModifier(Vector2 mod)
+    {
+        modifier = mod;
     }
 
 }
