@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class LightningScript : MonoBehaviour
 {
-    Vector3 speed = new Vector3(0.5f, 0, 0);
+    float speed;
+    float time;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        time = 0;
+        speed = 4.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        speed = speed + gameObject.transform.position;
-        gameObject.transform.position = speed;
+
+        time += Time.deltaTime;
+
+        transform.position += transform.right * speed * Time.deltaTime;
+
+
+        
     }
 
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(true /*something to describe a solid object*/)
+        if(false /*something to describe a solid object*/)
         {
             if(false /*this object is effected by a lightningbolt&*/)
             {

@@ -52,7 +52,7 @@ public class SpellManagerScript : MonoBehaviour
                 
                 Debug.Log("Gust Cast");
                 
-                Vector3 force = new Vector3(0, 1, 0);
+                Vector3 force = new Vector3(0, 100, 0);
                 m_RigidBody2D.AddForce(force, ForceMode2D.Impulse);
 
                 
