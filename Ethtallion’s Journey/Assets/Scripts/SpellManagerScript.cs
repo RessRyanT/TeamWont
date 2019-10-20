@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class SpellManagerScript : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class SpellManagerScript : MonoBehaviour
     GameObject wizardRef;
     Wizard wizardScriptRef;
     Rigidbody2D m_RigidBody2D;
+    
+
+    public GameObject myTileMap;
 
 
     public GameObject lightning;
@@ -74,6 +78,25 @@ public class SpellManagerScript : MonoBehaviour
                 Debug.Log("InverseG Cast");
                 m_RigidBody2D.gravityScale *= -1;
 
+
+                break;
+
+            case 111: //I dont know what the color code would be but
+                //Blink
+
+                Vector3 newPosition = wizardRef.transform.position;
+                newPosition.x += 1;
+                Grid myGrid = myTileMap.GetComponent<Grid>();
+                Vector3Int myCell = myGrid.WorldToCell(newPosition);
+                
+
+                if (!myTileMap.GetComponent<Tilemap>().HasTile(myCell))
+                {
+                    wizardRef.transform.position = newPosition;
+                }
+
+                 
+                
 
                 break;
             default:

@@ -17,6 +17,7 @@ public class Wizard : MonoBehaviour
 
     //Components
     public Rigidbody2D myRigidBody;
+    SpriteRenderer mySpriteRenderer;
 
 
     Vector2 modifier;
@@ -26,6 +27,8 @@ public class Wizard : MonoBehaviour
     void Start()
     {
         myRigidBody = gameObject.GetComponent<Rigidbody2D>();
+        mySpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
         myRigidBody.AddForce(new Vector2(speed, 0));
 
         speedUp = 0.5f;
@@ -44,6 +47,7 @@ public class Wizard : MonoBehaviour
         {
             speed = 0.5f;
             direction = -direction;
+            mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
         }
 
         //if lower than max speed, speed up, else use max speed
