@@ -19,13 +19,23 @@ public class Wizard : MonoBehaviour
     public Rigidbody2D myRigidBody;
     SpriteRenderer mySpriteRenderer;
 
+    //Singleton
+    public static Wizard instance;
 
     Vector2 modifier;
 
+
+    public static Wizard GetInstance()
+    {
+        return instance;
+    }
     
     // Start is called before the first frame update
     void Start()
     {
+
+        instance = this;
+
         myRigidBody = gameObject.GetComponent<Rigidbody2D>();
         mySpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
