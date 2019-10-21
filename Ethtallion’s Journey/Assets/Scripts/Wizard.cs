@@ -70,14 +70,25 @@ public class Wizard : MonoBehaviour
             speed = maxSpeed;
         }
 
-        Vector2 velocity = new Vector2(speed * direction, 0);
 
 
-        velocity = velocity + modifier;
 
+        //******New Method******
+        Move(new Vector2(direction, 0), speed);
+        transform.position = myRigidBody.position;
 
-        //Move the walker
-        myRigidBody.velocity = velocity;
+        //******Old Method******
+
+        //Vector2 velocity = new Vector2(speed * direction, 0);
+
+        //velocity = velocity + modifier;
+
+        //myRigidBody.velocity = velocity;
+    }
+
+    public void Move(Vector2 direction, float speed)
+    {
+        myRigidBody.MovePosition(myRigidBody.position + direction * Time.deltaTime * speed);
     }
 
     public void MovementModifier(Vector2 mod)
