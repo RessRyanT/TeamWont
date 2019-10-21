@@ -46,7 +46,7 @@ public class SpellManagerScript : MonoBehaviour
         Debug.Log("Spell Manager casting spell " + spellID);
         switch (spellID)
         {
-            case    : // Fireball
+            case 226: // Fireball
               
                 Debug.Log("Fireball Cast");
                 GameObject instFireball = Instantiate(fireball,wizardRef.transform);
