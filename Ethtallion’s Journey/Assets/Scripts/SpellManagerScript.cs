@@ -1,17 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class SpellManagerScript : MonoBehaviour
 {
 
     int effectRadius;
+    GameObject wizardRef;
+    Wizard wizardScriptRef;
+    Rigidbody2D m_RigidBody2D;
     
+
+    public GameObject myTileMap;
+
+
+    public GameObject lightning;
+    public GameObject gust;
+    public GameObject fireball;
 
     // Start is called before the first frame update
     void Start()
     {
-        wizardObject = gameObject.GetComponentInParent<Wizard>().gameObject;
+        wizardScriptRef = GameObject.FindObjectOfType<Wizard>();
+        wizardRef = wizardScriptRef.gameObject;
+        m_RigidBody2D = wizardRef.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -36,11 +49,16 @@ public class SpellManagerScript : MonoBehaviour
             case 226: // Fireball
               
                 Debug.Log("Fireball Cast");
+                GameObject instFireball = Instantiate(fireball,wizardRef.transform);
                 
                 break;
             case 232: // Gust
                 
                 Debug.Log("Gust Cast");
+                
+                Vector3 force = new Vector3(0, 100, 0);
+                m_RigidBody2D.AddForce(force, ForceMode2D.Impulse);
+
                 
                 break;
             case 214: // BlockShift
@@ -51,12 +69,35 @@ public class SpellManagerScript : MonoBehaviour
             case 220: // Shock
                 
                 Debug.Log("Shock Cast");
-      
+                GameObject instLightning = Instantiate(lightning, wizardRef.transform.position, Quaternion.identity);
+                
+
                 break;
             case 333: // InverseG
               
                 Debug.Log("InverseG Cast");
-           
+                m_RigidBody2D.gravityScale *= -1;
+
+
+                break;
+
+            case 111: //I dont know what the color code would be but
+                //Blink
+
+                Vector3 newPosition = wizardRef.transform.position;
+                newPosition.x += 1;
+                Grid myGrid = myTileMap.GetComponent<Grid>();
+                Vector3Int myCell = myGrid.WorldToCell(newPosition);
+                
+
+                if (!myTileMap.GetComponent<Tilemap>().HasTile(myCell))
+                {
+                    wizardRef.transform.position = newPosition;
+                }
+
+                 
+                
+
                 break;
             default:
                 // fail case

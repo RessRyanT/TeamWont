@@ -17,19 +17,26 @@ public class Wizard : MonoBehaviour
 
     //Components
     public Rigidbody2D myRigidBody;
+    SpriteRenderer mySpriteRenderer;
 
+
+    Vector2 modifier;
 
     
     // Start is called before the first frame update
     void Start()
     {
         myRigidBody = gameObject.GetComponent<Rigidbody2D>();
+        mySpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
         myRigidBody.AddForce(new Vector2(speed, 0));
 
         speedUp = 0.5f;
         maxSpeed = 2f;
         direction = 1f;
         health = 10;
+
+        modifier = new Vector2(0,0);
     }
 
     // Update is called once per frame
@@ -40,6 +47,7 @@ public class Wizard : MonoBehaviour
         {
             speed = 0.5f;
             direction = -direction;
+            mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
         }
 
         //if lower than max speed, speed up, else use max speed
@@ -54,12 +62,17 @@ public class Wizard : MonoBehaviour
 
         Vector2 velocity = new Vector2(speed * direction, 0);
 
-        
 
+        velocity = velocity + modifier;
 
 
         //Move the walker
         myRigidBody.velocity = velocity;
+    }
+
+    public void MovementModifier(Vector2 mod)
+    {
+        modifier = mod;
     }
 
 }
