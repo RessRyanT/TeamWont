@@ -10,6 +10,23 @@ public class ButtonHandler : MonoBehaviour
 
     public void SendNumber()
     {
-        InputManagerObject.GetComponent<InputManager>().TakeInput(1);
+        if(gameObject.name == "YellowButton")
+        {
+            InputManagerObject.GetComponent<InputManager>().TakeInput(101);
+        }
+        else if (gameObject.name == "RedButton")
+        {
+            InputManagerObject.GetComponent<InputManager>().TakeInput(113);
+        }
+        else if (gameObject.name == "BlueButton")
+        {
+            InputManagerObject.GetComponent<InputManager>().TakeInput(119);
+        }
+        else
+        {
+            InputManagerObject.GetComponent<InputManager>().TakeInput(1);
+        }
+
+        // InputManagerObject.GetComponent<InputManager>().TakeInput(1);
     }
 }

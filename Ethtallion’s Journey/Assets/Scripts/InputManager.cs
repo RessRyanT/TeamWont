@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     // variables
-    public uint totalKeyValue;
+    public int totalKeyValue;
 
     public GameObject SpellManagerObject;
 
@@ -66,7 +66,16 @@ public class InputManager : MonoBehaviour
 
     public void TakeInput(int input)
     {
-        Debug.Log("works!");
+        if (input != 1)
+        {
+            totalKeyValue += input;
+            Debug.Log("works!");
+        }
+
+        else
+        {
+            Debug.Log("Didn't work.");
+        }
     }
 
     void ResetKeyVal()
