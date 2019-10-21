@@ -19,13 +19,23 @@ public class Wizard : MonoBehaviour
     public Rigidbody2D myRigidBody;
     SpriteRenderer mySpriteRenderer;
 
+    //Singleton
+    public static Wizard instance;
 
     Vector2 modifier;
 
+
+    public static Wizard GetInstance()
+    {
+        return instance;
+    }
     
     // Start is called before the first frame update
     void Start()
     {
+
+        instance = this;
+
         myRigidBody = gameObject.GetComponent<Rigidbody2D>();
         mySpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
@@ -60,14 +70,25 @@ public class Wizard : MonoBehaviour
             speed = maxSpeed;
         }
 
-        Vector2 velocity = new Vector2(speed * direction, 0);
 
 
-        velocity = velocity + modifier;
 
+        //******New Method******
+        Move(new Vector2(direction, 0), speed);
+        transform.position = myRigidBody.position;
 
-        //Move the walker
-        myRigidBody.velocity = velocity;
+        //******Old Method******
+
+        //Vector2 velocity = new Vector2(speed * direction, 0);
+
+        //velocity = velocity + modifier;
+
+        //myRigidBody.velocity = velocity;
+    }
+
+    public void Move(Vector2 direction, float speed)
+    {
+        myRigidBody.MovePosition(myRigidBody.position + direction * Time.deltaTime * speed);
     }
 
     public void MovementModifier(Vector2 mod)

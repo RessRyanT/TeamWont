@@ -34,21 +34,7 @@ public class InputManager : MonoBehaviour
     {
         // if (Input.GetKey(KeyCode.Space))
         // {
-        if (Input.GetKeyUp(KeyCode.Q))
-        {
-            totalKeyValue += (int)KeyCode.Q; // 113
-            Debug.Log((int)KeyCode.Q);
-        }
-        else if (Input.GetKeyUp(KeyCode.W))
-        {
-            totalKeyValue += (int)KeyCode.W; // 119
-            Debug.Log((int)KeyCode.W);
-        }
-        else if (Input.GetKeyUp(KeyCode.E))
-        {
-            totalKeyValue += (int)KeyCode.E; // 101
-            Debug.Log((int)KeyCode.E);
-        }
+        KBinput();
         // }
 
         if (totalKeyValue >= 202)
@@ -64,17 +50,32 @@ public class InputManager : MonoBehaviour
         Debug.Log("Spell " + spellInput + " sent to Spell Manager");
     }
 
-    public void TakeInput(int input)
+    public void ScreenButtonInput(int input)
     {
-        if (input != 1)
-        {
-            totalKeyValue += input;
-            Debug.Log("works!");
-        }
+        totalKeyValue += (uint)input;
+        Debug.Log(totalKeyValue);
 
-        else
+    }
+
+    public void KBinput()
+    {
+        if (Input.GetKeyUp(KeyCode.Q))
         {
-            Debug.Log("Didn't work.");
+            totalKeyValue += (int)KeyCode.Q; // 113
+            Debug.Log(totalKeyValue);
+        }
+        else if (Input.GetKeyUp(KeyCode.W))
+        {
+            totalKeyValue += (int)KeyCode.W; // 119
+            Debug.Log(totalKeyValue);
+        }
+        else if (Input.GetKeyUp(KeyCode.E))
+        {
+            totalKeyValue += (int)KeyCode.E; // 101
+            Debug.Log(totalKeyValue);
+        }else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Debug.Log(totalKeyValue);
         }
     }
 
@@ -85,6 +86,7 @@ public class InputManager : MonoBehaviour
 
     void SpellSwitch(SpellName spellCast)
     {
+        ResetKeyVal();
         switch (spellCast)
         {
             case SpellName.Fireball:
