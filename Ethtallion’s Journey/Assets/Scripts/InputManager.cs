@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     // variables
-    public uint totalKeyValue;
+    public int totalKeyValue;
 
     public GameObject SpellManagerObject;
 
