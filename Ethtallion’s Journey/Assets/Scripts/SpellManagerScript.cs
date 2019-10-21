@@ -5,9 +5,8 @@ using UnityEngine;
 public class SpellManagerScript : MonoBehaviour
 {
 
-    public GameObject wizardObject;
-    // public int Gust
-
+    int effectRadius;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +36,7 @@ public class SpellManagerScript : MonoBehaviour
             case 226: // Fireball
               
                 Debug.Log("Fireball Cast");
-             
+                
                 break;
             case 232: // Gust
                 

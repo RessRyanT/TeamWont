@@ -52,8 +52,14 @@ public class Wizard : MonoBehaviour
             speed = maxSpeed;
         }
 
+        Vector2 velocity = new Vector2(speed * direction, 0);
+
+        
+
+
+
         //Move the walker
-        myRigidBody.velocity = new Vector2(speed * direction, 0);
+        myRigidBody.velocity = velocity;
     }
 
 }
