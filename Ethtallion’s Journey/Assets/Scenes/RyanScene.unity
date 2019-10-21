@@ -460,7 +460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -421, y: 411.29993}
+  m_AnchoredPosition: {x: -421, y: 251.99994}
   m_SizeDelta: {x: 67.4, y: 62.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779578766
@@ -1095,7 +1095,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -306, y: 411.29993}
+  m_AnchoredPosition: {x: -306, y: 251.99994}
   m_SizeDelta: {x: 67.4, y: 62.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1185749157
@@ -1329,7 +1329,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edba81c9cc295364f9512fd0a5f5f949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wizardObject: {fileID: 0}
+  myTileMap: {fileID: 0}
+  lightning: {fileID: 0}
+  gust: {fileID: 0}
+  fireball: {fileID: 0}
 --- !u!1 &1808786454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,7 +1370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -532.6, y: 411.3}
+  m_AnchoredPosition: {x: -532.6, y: 252}
   m_SizeDelta: {x: 67.4, y: 62.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1808786456
