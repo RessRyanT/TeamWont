@@ -16,5 +16,6 @@ public class ButtonHandler : MonoBehaviour
             InputManagerObject.GetComponent<InputManager>().ScreenButtonInput(BUTTON_KEY_VALUE);
             remainingComponents--;
         }
+        // gameObject.GetComponent<Text>().text = remainingComponents.ToString();
     }
 }
