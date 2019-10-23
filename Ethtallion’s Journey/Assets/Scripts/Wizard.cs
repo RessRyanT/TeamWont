@@ -17,7 +17,11 @@ public class Wizard : MonoBehaviour
 
     //Components
     public Rigidbody2D myRigidBody;
-    SpriteRenderer mySpriteRenderer;
+    private SpriteRenderer mySpriteRenderer;
+    private BoxCollider2D myBoxCollider2D;
+    private LayerMask blockingLayer;
+
+    //Target
     public GameObject finish;
 
     //Singleton
@@ -39,6 +43,8 @@ public class Wizard : MonoBehaviour
 
         myRigidBody = gameObject.GetComponent<Rigidbody2D>();
         mySpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        myBoxCollider2D = gameObject.GetComponent<BoxCollider2D>();
+
 
         myRigidBody.AddForce(new Vector2(speed, 0));
 
@@ -102,6 +108,18 @@ public class Wizard : MonoBehaviour
     public void MovementModifier(Vector2 mod)
     {
         modifier = mod;
+    }
+
+    protected bool DetectObs()
+    {
+        Vector2 start = transform.position;
+        Vector2 end = start + new Vector2(direction, 0);
+
+        myBoxCollider2D.enabled = false;
+
+        RaycastHit2D hit = Physics2D.Linecast(start, end, blockingLayer);
+
+        return false;
     }
 
 }
