@@ -8,6 +8,7 @@ public class Wizard : MonoBehaviour
     public float speed;
     private float speedUp;
     private float maxSpeed;
+    Vector2 velocity;
 
     //Direction
     private float direction;
@@ -60,16 +61,7 @@ public class Wizard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //When hit a wall, reduce speed and turn around
-        if (myRigidBody.GetRelativePointVelocity(transform.position) == Vector2.zero)
-        {
-            //speed = 0.5f;
-            //direction = -direction;
-            //mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
-        }
-
         
-
         if (GetComponent<BoxCollider2D>().IsTouching(finish.GetComponent<BoxCollider2D>()))
         {
             //the level is completed. put tha code here
@@ -77,41 +69,28 @@ public class Wizard : MonoBehaviour
         }
 
 
-        //if lower than max speed, speed up, else use max speed
-
-
-        //******Old Method******
-
-        //Vector2 velocity = new Vector2(speed * direction, 0);
-
-        //velocity = velocity + modifier;
-
-        //myRigidBody.velocity = velocity;
-    }
-
-    private void FixedUpdate()
-    {
+        //When hit a wall, reduce speed and turn around
         if (DetectObs())
         {
+            speed = 0.5f;
             direction = -direction;
+            mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
         }
 
-        if (speed < maxSpeed)
+        //if lower than max speed, speed up, else use max speed
+        if (velocity.magnitude < maxSpeed)
         {
-            speed += Time.deltaTime * speedUp;
+            //speed += Time.deltaTime * speedUp;
+            velocity += new Vector2(speedUp * direction, 0);
         }
         else
         {
-            speed = maxSpeed;
+            //speed = maxSpeed;
+            velocity = new Vector2(maxSpeed * direction, 0);
         }
 
-        Move(new Vector2(direction, 0), speed);
-        transform.position = myRigidBody.position;
-    }
-
-    public void Move(Vector2 direction, float speed)
-    {
-        myRigidBody.MovePosition(myRigidBody.position + direction * Time.deltaTime * speed);
+        velocity = velocity + modifier;
+        myRigidBody.velocity = velocity;
     }
 
     public void MovementModifier(Vector2 mod)
@@ -137,6 +116,27 @@ public class Wizard : MonoBehaviour
         }
 
         Debug.Log("Hit!");
+        return true;
+    }
+
+    protected bool DetectGround()
+    {
+        Vector2 start = transform.position;
+        Vector2 end = start + new Vector2(0, myBoxCollider2D.bounds.extents.y);
+        Debug.DrawLine(start, end);
+
+        myBoxCollider2D.enabled = false;
+
+        RaycastHit2D hit = Physics2D.Linecast(start, end, blockingLayer);
+
+        myBoxCollider2D.enabled = true;
+
+        if (hit.transform == null)
+        {
+            return false;
+        }
+
+        Debug.Log("Grounded!");
         return true;
     }
 
