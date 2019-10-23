@@ -44,6 +44,7 @@ public class Wizard : MonoBehaviour
         myRigidBody = gameObject.GetComponent<Rigidbody2D>();
         mySpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         myBoxCollider2D = gameObject.GetComponent<BoxCollider2D>();
+        blockingLayer = LayerMask.GetMask("Wall");
 
 
         myRigidBody.AddForce(new Vector2(speed, 0));
@@ -62,10 +63,12 @@ public class Wizard : MonoBehaviour
         //When hit a wall, reduce speed and turn around
         if (myRigidBody.GetRelativePointVelocity(transform.position) == Vector2.zero)
         {
-            speed = 0.5f;
-            direction = -direction;
-            mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
+            //speed = 0.5f;
+            //direction = -direction;
+            //mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
         }
+
+        
 
         if (GetComponent<BoxCollider2D>().IsTouching(finish.GetComponent<BoxCollider2D>()))
         {
@@ -75,6 +78,24 @@ public class Wizard : MonoBehaviour
 
 
         //if lower than max speed, speed up, else use max speed
+
+
+        //******Old Method******
+
+        //Vector2 velocity = new Vector2(speed * direction, 0);
+
+        //velocity = velocity + modifier;
+
+        //myRigidBody.velocity = velocity;
+    }
+
+    private void FixedUpdate()
+    {
+        if (DetectObs())
+        {
+            direction = -direction;
+        }
+
         if (speed < maxSpeed)
         {
             speed += Time.deltaTime * speedUp;
@@ -84,20 +105,8 @@ public class Wizard : MonoBehaviour
             speed = maxSpeed;
         }
 
-
-
-
-        //******New Method******
         Move(new Vector2(direction, 0), speed);
         transform.position = myRigidBody.position;
-
-        //******Old Method******
-
-        //Vector2 velocity = new Vector2(speed * direction, 0);
-
-        //velocity = velocity + modifier;
-
-        //myRigidBody.velocity = velocity;
     }
 
     public void Move(Vector2 direction, float speed)
@@ -113,13 +122,22 @@ public class Wizard : MonoBehaviour
     protected bool DetectObs()
     {
         Vector2 start = transform.position;
-        Vector2 end = start + new Vector2(direction, 0);
+        Vector2 end = start + new Vector2(direction * myBoxCollider2D.bounds.extents.x * 1.1f, 0);
+        Debug.DrawLine(start, end);
 
         myBoxCollider2D.enabled = false;
 
         RaycastHit2D hit = Physics2D.Linecast(start, end, blockingLayer);
 
-        return false;
+        myBoxCollider2D.enabled = true;
+
+        if(hit.transform == null)
+        {
+            return false;
+        }
+
+        Debug.Log("Hit!");
+        return true;
     }
 
 }
