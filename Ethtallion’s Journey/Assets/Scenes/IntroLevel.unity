@@ -267,6 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BUTTON_KEY_VALUE: 113
   InputManagerObject: {fileID: 961164977}
+  remainingComponents: 5
 --- !u!1 &438218901
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +939,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4239958695945894605, guid: 7f1b68e09c1ff034b91d38ed3625254f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f1b68e09c1ff034b91d38ed3625254f, type: 3}
 --- !u!1 &638279999
@@ -1087,6 +1093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BUTTON_KEY_VALUE: 119
   InputManagerObject: {fileID: 961164977}
+  remainingComponents: 5
 --- !u!1 &807291709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,7 +1339,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1311528083
 GameObject:
@@ -1404,15 +1411,20 @@ PrefabInstance:
       propertyPath: health
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6653668382189816443, guid: 8d59e4d808041d94e876e44e1e75e2d3,
+        type: 3}
+      propertyPath: finish
+      value: 
+      objectReference: {fileID: 1701736610}
     - target: {fileID: 6475478715484159774, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7
+      value: -6.13
       objectReference: {fileID: 0}
     - target: {fileID: 6475478715484159774, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.73
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 6475478715484159774, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
@@ -1782,6 +1794,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BUTTON_KEY_VALUE: 101
   InputManagerObject: {fileID: 961164977}
+  remainingComponents: 5
+--- !u!1 &1701736610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1422461203193588644, guid: 7f1b68e09c1ff034b91d38ed3625254f,
+    type: 3}
+  m_PrefabInstance: {fileID: 565880306}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1792386728
 GameObject:
   m_ObjectHideFlags: 0

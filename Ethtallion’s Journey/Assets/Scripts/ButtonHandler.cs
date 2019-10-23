@@ -7,9 +7,14 @@ public class ButtonHandler : MonoBehaviour
 {
     public uint BUTTON_KEY_VALUE;
     public GameObject InputManagerObject;
+    public int remainingComponents;
 
     public void SendNumber()
     {
-        InputManagerObject.GetComponent<InputManager>().ScreenButtonInput(BUTTON_KEY_VALUE);
+        if (remainingComponents > 0)
+        {
+            InputManagerObject.GetComponent<InputManager>().ScreenButtonInput(BUTTON_KEY_VALUE);
+            remainingComponents--;
+        }
     }
 }

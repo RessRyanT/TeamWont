@@ -64,6 +64,7 @@ public class Wizard : MonoBehaviour
         if (GetComponent<BoxCollider2D>().IsTouching(finish.GetComponent<BoxCollider2D>()))
         {
             //the level is completed. put tha code here
+            Debug.Log("We hit it.");
         }
 
 
