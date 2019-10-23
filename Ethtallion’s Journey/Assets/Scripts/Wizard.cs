@@ -18,6 +18,7 @@ public class Wizard : MonoBehaviour
     //Components
     public Rigidbody2D myRigidBody;
     SpriteRenderer mySpriteRenderer;
+    public GameObject finish;
 
     //Singleton
     public static Wizard instance;
@@ -59,6 +60,12 @@ public class Wizard : MonoBehaviour
             direction = -direction;
             mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
         }
+
+        if (GetComponent<BoxCollider2D>().IsTouching(finish.GetComponent<BoxCollider2D>()))
+        {
+            //the level is completed. put tha code here
+        }
+
 
         //if lower than max speed, speed up, else use max speed
         if (speed < maxSpeed)

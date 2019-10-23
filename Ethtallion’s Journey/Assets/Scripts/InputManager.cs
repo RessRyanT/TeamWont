@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     // variables
-    public int totalKeyValue;
+    public uint totalKeyValue;
 
     public GameObject SpellManagerObject;
 
@@ -50,9 +50,9 @@ public class InputManager : MonoBehaviour
         Debug.Log("Spell " + spellInput + " sent to Spell Manager");
     }
 
-    public void ScreenButtonInput(int input)
+    public void ScreenButtonInput(uint input)
     {
-        totalKeyValue += (uint)input;
+        totalKeyValue += input;
         Debug.Log(totalKeyValue);
 
     }

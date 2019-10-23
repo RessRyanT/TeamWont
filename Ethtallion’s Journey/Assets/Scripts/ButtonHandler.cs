@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonHandler : MonoBehaviour
 {
-    public int BUTTON_KEY_VALUE;
+    public uint BUTTON_KEY_VALUE;
     public GameObject InputManagerObject;
 
     public void SendNumber()
