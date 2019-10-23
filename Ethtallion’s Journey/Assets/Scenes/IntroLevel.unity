@@ -1486,6 +1486,11 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6475478715484159768, guid: 8d59e4d808041d94e876e44e1e75e2d3,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d59e4d808041d94e876e44e1e75e2d3, type: 3}
 --- !u!4 &1330128545 stripped
@@ -1914,7 +1919,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125757261}
   m_Enabled: 1
-  m_CellSize: {x: 1.25, y: 1.25, z: 0}
+  m_CellSize: {x: 1.28, y: 1.28, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
