@@ -1478,15 +1478,30 @@ PrefabInstance:
       propertyPath: finish
       value: 
       objectReference: {fileID: 1701736610}
+    - target: {fileID: 6653668382189816443, guid: 8d59e4d808041d94e876e44e1e75e2d3,
+        type: 3}
+      propertyPath: jumpSpeed
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653668382189816443, guid: 8d59e4d808041d94e876e44e1e75e2d3,
+        type: 3}
+      propertyPath: jumpDuration
+      value: 0.828
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653668382189816443, guid: 8d59e4d808041d94e876e44e1e75e2d3,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 1.53
+      objectReference: {fileID: 0}
     - target: {fileID: 6475478715484159774, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.13
+      value: -6.1381
       objectReference: {fileID: 0}
     - target: {fileID: 6475478715484159774, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22
+      value: -0.2159
       objectReference: {fileID: 0}
     - target: {fileID: 6475478715484159774, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
@@ -1533,6 +1548,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6475478715484159774, guid: 8d59e4d808041d94e876e44e1e75e2d3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475478715484159774, guid: 8d59e4d808041d94e876e44e1e75e2d3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6475478715484159768, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
       propertyPath: m_Constraints
@@ -1546,7 +1571,7 @@ PrefabInstance:
     - target: {fileID: 6475478715484159768, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
       propertyPath: m_GravityScale
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6475478715484159768, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
@@ -1926,7 +1951,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
