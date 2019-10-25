@@ -69,8 +69,8 @@ public class SpellManagerScript : MonoBehaviour
             case 220: // Shock
                 
                 Debug.Log("Shock Cast");
-                GameObject instLightning = Instantiate(lightning, wizardRef.transform.position, Quaternion.identity);
-                
+                //GameObject instLightning = Instantiate(lightning, wizardRef.transform.position, Quaternion.identity);
+                GetComponentInChildren<ElectricityManager>().WhenCast();
 
                 break;
             case 333: // InverseG

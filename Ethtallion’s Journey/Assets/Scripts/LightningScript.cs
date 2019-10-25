@@ -27,19 +27,5 @@ public class LightningScript : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(false /*something to describe a solid object*/)
-        {
-            if(false /*this object is effected by a lightningbolt&*/)
-            {
-                //stuff goes here
-            }
-
-
-            Object.Destroy(gameObject);
-        }
-        
-        
-    }
+    
 }

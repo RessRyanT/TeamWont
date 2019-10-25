@@ -1,0 +1,13 @@
+int lastcast;
+    void Start()
+    {
+        lastcast = -1;
+    }
+
+    void OnZap(int timescast)
+    {
+        if (timescast != lastcast)
+        {
+            lastcast = timescast;
+        }
+    }
