@@ -9,11 +9,15 @@ public class LightningScript : MonoBehaviour
     float time;
     Grid m_grid;
 
+    ElectricityManager elecRef;
+
     // Start is called before the first frame update
     void Start()
     {
         time = 0;
         speed = 4.0f;
+        elecRef = GameObject.FindObjectOfType<ElectricityManager>();
+
     }
 
     void setUp(GameObject grid){
@@ -28,15 +32,10 @@ public class LightningScript : MonoBehaviour
 
         transform.position += transform.right * speed * Time.deltaTime;
 
-        Vector3Int myCellpos = myGrid.WorldToCell(transform.position);
+        Vector3Int myCellpos = m_grid.WorldToCell(transform.position);
 
         if (m_grid.GetComponent<Tilemap>().HasTile(myCellpos))
         {
-            GameObject tilehere = m_grid.GetComponent<Tilemap>().GetTile(myCellpos);
-            
-        if(tilehere.GetComponent("LightningEffected")){
-            tilehere.GetComponent<LightningEffected>().Toggle();
-        }
 
         }
         
