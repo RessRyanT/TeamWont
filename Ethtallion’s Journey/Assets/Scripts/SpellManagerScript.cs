@@ -55,9 +55,11 @@ public class SpellManagerScript : MonoBehaviour
             case 232: // Gust
                 
                 Debug.Log("Gust Cast");
-                
-                Vector3 force = new Vector3(0, 100, 0);
-                m_RigidBody2D.AddForce(force, ForceMode2D.Impulse);
+
+                //Vector3 force = new Vector3(0, 100, 0);
+                //m_RigidBody2D.AddForce(force, ForceMode2D.Impulse);
+                Wizard wizard = Wizard.GetInstance();
+                wizard.isJumping = true;
 
                 
                 break;

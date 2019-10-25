@@ -7,7 +7,7 @@ public class Wizard : MonoBehaviour
     //Speed
     public float speed;
     private float speedUp;
-    private float maxSpeed;
+    [SerializeField] [Range(0, 4)] private float maxSpeed;
     Vector2 velocity;
 
     //Direction
@@ -15,6 +15,10 @@ public class Wizard : MonoBehaviour
 
     //Stats
     public int health;
+    [SerializeField] [Range(0, 4)] private float jumpSpeed;
+    [SerializeField] [Range(0, 2)] private float jumpDuration;
+    private float jumpTick;
+    public bool isJumping;
 
     //Components
     public Rigidbody2D myRigidBody;
@@ -39,21 +43,21 @@ public class Wizard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //Singleton
         instance = this;
 
+        //Get Components
         myRigidBody = gameObject.GetComponent<Rigidbody2D>();
         mySpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         myBoxCollider2D = gameObject.GetComponent<BoxCollider2D>();
         blockingLayer = LayerMask.GetMask("Wall");
 
-
-        myRigidBody.AddForce(new Vector2(speed, 0));
-
+        //Init variables
         speedUp = 0.5f;
         maxSpeed = 2f;
         direction = 1f;
         health = 10;
+        jumpTick += jumpDuration;
 
         modifier = new Vector2(0,0);
     }
@@ -75,6 +79,22 @@ public class Wizard : MonoBehaviour
             speed = 0.5f;
             direction = -direction;
             mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
+        }
+
+
+        if (isJumping)
+        {
+            if(jumpTick > 0)
+            {
+                Jump();
+                jumpTick -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+                jumpTick = 0;
+                jumpTick += jumpDuration;
+            }
         }
 
         //if lower than max speed, speed up, else use max speed
@@ -122,13 +142,14 @@ public class Wizard : MonoBehaviour
     protected bool DetectGround()
     {
         Vector2 start = transform.position;
-        Vector2 end = start + new Vector2(0, myBoxCollider2D.bounds.extents.y);
+        Vector2 end = start - new Vector2(0, myBoxCollider2D.bounds.extents.y * 1.1f);
         Debug.DrawLine(start, end);
 
         myBoxCollider2D.enabled = false;
 
-        RaycastHit2D hit = Physics2D.Linecast(start, end, blockingLayer);
+        //RaycastHit2D hit = Physics2D.Linecast(start, end, blockingLayer);
 
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, myBoxCollider2D.bounds.extents, 0.0f, new Vector2(direction, 0));
         myBoxCollider2D.enabled = true;
 
         if (hit.transform == null)
@@ -139,5 +160,12 @@ public class Wizard : MonoBehaviour
         Debug.Log("Grounded!");
         return true;
     }
+
+    protected void Jump()
+    {
+            myRigidBody.MovePosition((Vector2)transform.position + new Vector2(0, 1f * Time.deltaTime * jumpSpeed) + velocity * Time.deltaTime);
+    }
+
+
 
 }
