@@ -28,6 +28,7 @@ public class Wizard : MonoBehaviour
 
     //Target
     public GameObject finish;
+    public GameObject sceneManagerObject;
 
     //Singleton
     public static Wizard instance;
@@ -69,6 +70,7 @@ public class Wizard : MonoBehaviour
         if (GetComponent<BoxCollider2D>().IsTouching(finish.GetComponent<BoxCollider2D>()))
         {
             //the level is completed. put tha code here
+            sceneManagerObject.GetComponent<SceneMnger>().NextLevel();
             Debug.Log("We hit it.");
         }
 
