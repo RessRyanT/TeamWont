@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
+
 
 public class SpellManagerScript : MonoBehaviour
 {
@@ -12,12 +12,15 @@ public class SpellManagerScript : MonoBehaviour
     Rigidbody2D m_RigidBody2D;
     
 
-    public GameObject myTileMap;
+    
 
 
     public GameObject lightning;
     public GameObject gust;
     public GameObject fireball;
+
+
+    List<Collider2D> colliders;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,9 @@ public class SpellManagerScript : MonoBehaviour
         wizardScriptRef = GameObject.FindObjectOfType<Wizard>();
         wizardRef = wizardScriptRef.gameObject;
         m_RigidBody2D = wizardRef.GetComponent<Rigidbody2D>();
+
+        colliders = new List<Collider2D>(GameObject.FindObjectsOfType<Collider2D>());
+
     }
 
     // Update is called once per frame
@@ -88,14 +94,25 @@ public class SpellManagerScript : MonoBehaviour
 
                 Vector3 newPosition = wizardRef.transform.position;
                 newPosition.x += 1;
-                Grid myGrid = myTileMap.GetComponent<Grid>();
-                Vector3Int myCell = myGrid.WorldToCell(newPosition);
-                
 
-                if (!myTileMap.GetComponent<Tilemap>().HasTile(myCell))
+                bool valid = true;
+                
+                foreach(Collider2D c in colliders)
+                {
+                    if (c.OverlapPoint(newPosition)) valid = false;
+                }
+
+                if (valid)
                 {
                     wizardRef.transform.position = newPosition;
                 }
+                else
+                {
+                    Debug.Log("Invalid Tele");
+                }
+                
+
+               
 
                  
                 
