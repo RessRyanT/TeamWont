@@ -22,13 +22,24 @@ public class FireBallScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.collider.SendMessage("FireballHit", SendMessageOptions.DontRequireReceiver);
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Destructable")
+        {
+            collision.collider.SendMessage("FireballHit", SendMessageOptions.DontRequireReceiver);
+            Debug.Log("Hit a wall or kirby");
+        }
+        else
+        {
+            Debug.Log("Hit something else");
+            Destroy(gameObject);
+        }
+        // Debug.Log("I'm colliding");
+        // Destroy(gameObject);
     }
 
     public void SetLeft()
     {
         myVelocity = new Vector3(-fireballSpeed, 0, 0);
     }
+
 
 }
