@@ -28,6 +28,7 @@ public class Wizard : MonoBehaviour
 
     //Target
     public GameObject finish;
+    public GameObject sceneManagerObject;
 
     //Singleton
     public static Wizard instance;
@@ -53,8 +54,8 @@ public class Wizard : MonoBehaviour
         blockingLayer = LayerMask.GetMask("Wall");
 
         //Init variables
-        speedUp = 0.5f;
-        maxSpeed = 2f;
+        speedUp = 0.25f;
+        //maxSpeed = 2f;
         direction = 1f;
         health = 10;
         jumpTick += jumpDuration;
@@ -69,6 +70,7 @@ public class Wizard : MonoBehaviour
         if (GetComponent<BoxCollider2D>().IsTouching(finish.GetComponent<BoxCollider2D>()))
         {
             //the level is completed. put tha code here
+            sceneManagerObject.GetComponent<SceneMnger>().NextLevel();
             Debug.Log("We hit it.");
         }
 
@@ -76,12 +78,13 @@ public class Wizard : MonoBehaviour
         //When hit a wall, reduce speed and turn around
         if (DetectObs())
         {
+            Debug.Log("Obs");
             speed = 0.5f;
             direction = -direction;
             mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
         }
 
-
+        //Gust behavior
         if (isJumping)
         {
             if(jumpTick > 0)
@@ -163,7 +166,14 @@ public class Wizard : MonoBehaviour
 
     protected void Jump()
     {
-            myRigidBody.MovePosition((Vector2)transform.position + new Vector2(0, 1f * Time.deltaTime * jumpSpeed) + velocity * Time.deltaTime);
+        if (DetectObs())
+        {
+            speed = 0.5f;
+            direction = -direction;
+            mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
+        }
+
+        myRigidBody.MovePosition((Vector2)transform.position + new Vector2(0, 1f * Time.deltaTime * jumpSpeed) + new Vector2(velocity.magnitude * direction, 0) * Time.deltaTime);
     }
 
 
