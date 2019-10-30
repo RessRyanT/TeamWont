@@ -15,15 +15,21 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 43.2
     width: 1985.6
     height: 1108.8
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     x: 197.33334
     y: 201.33334
     width: 2048
     height: 1068.6667
+<<<<<<< HEAD
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
+=======
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
   m_ShowMode: 4
   m_Title: 
@@ -50,6 +56,7 @@ MonoBehaviour:
     x: 0
     y: 30
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1986
     height: 1059
   m_MinSize: {x: 685, y: 494}
@@ -57,12 +64,17 @@ MonoBehaviour:
   vertical: 0
   controlID: 42
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     width: 2048
     height: 1019
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
   controlID: 127
+<<<<<<< HEAD
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
+=======
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 --- !u!114 &3
 MonoBehaviour:
@@ -80,6 +92,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1583
     y: 0
     width: 403
@@ -88,6 +101,8 @@ MonoBehaviour:
   m_MaxSize: {x: 4004, y: 4022}
   m_ActualView: {fileID: 15}
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     x: 1633
     y: 0
     width: 415
@@ -118,12 +133,15 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 392
     height: 640
   m_MinSize: {x: 202, y: 222}
   m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 16}
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     width: 404
     height: 616
   m_MinSize: {x: 202, y: 222}
@@ -151,9 +169,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 640
     width: 1583
     height: 419
+=======
+    y: 616
+    width: 1633
+    height: 403
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
     y: 616
     width: 1633
@@ -189,10 +213,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1986
     height: 1109
   m_MinSize: {x: 950, y: 544}
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     width: 2048
     height: 1069
   m_MinSize: {x: 950, y: 300}
@@ -216,7 +243,11 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1986
+=======
+    width: 2048
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
     width: 2048
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
@@ -265,12 +296,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1583
     height: 1059
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
   controlID: 43
+=======
+    width: 1633
+    height: 1019
+  m_MinSize: {x: 406, y: 494}
+  m_MaxSize: {x: 10002, y: 14044}
+  vertical: 1
+  controlID: 65
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
     width: 1633
     height: 1019
@@ -299,12 +339,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1583
     height: 640
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
   controlID: 44
+=======
+    width: 1633
+    height: 616
+  m_MinSize: {x: 406, y: 222}
+  m_MaxSize: {x: 8006, y: 4022}
+  vertical: 0
+  controlID: 66
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
     width: 1633
     height: 616
@@ -329,15 +378,21 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 392
     y: 0
     width: 1191
     height: 640
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     x: 404
     y: 0
     width: 1229
     height: 616
+<<<<<<< HEAD
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
+=======
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
   m_MinSize: {x: 204, y: 222}
   m_MaxSize: {x: 4004, y: 4022}
@@ -427,15 +482,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 713.60004
     width: 1583
     height: 400
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     x: 197.33334
     y: 847.3334
     width: 1633
     height: 384
+<<<<<<< HEAD
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
+=======
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -457,7 +518,11 @@ MonoBehaviour:
   - Assets/Prefabs
   m_LastFoldersGridSize: -1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastProjectPath: "Z:\\IGMProfile\\Desktop\\TeamWontGame\\TeamWont\\Ethtallion\u2019s
+=======
+  m_LastProjectPath: "D:\\Profiles\\wtw1820\\Documents\\repos\\TeamWont\\Ethtallion\u2019s
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
   m_LastProjectPath: "D:\\Profiles\\wtw1820\\Documents\\repos\\TeamWont\\Ethtallion\u2019s
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
@@ -467,9 +532,15 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 7a2c0000
     m_LastClickedID: 11386
     m_ExpandedIDs: 00000000122c000000ca9a3b
+=======
+    m_SelectedIDs: 5c2d0000
+    m_LastClickedID: 11612
+    m_ExpandedIDs: 00000000f42a000000ca9a3b
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
     m_SelectedIDs: 5c2d0000
     m_LastClickedID: 11612
@@ -503,7 +574,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000122c0000
+=======
+    m_ExpandedIDs: 00000000f42a0000
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
     m_ExpandedIDs: 00000000f42a0000
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
@@ -583,15 +658,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1583.2001
     y: 73.6
     width: 401
     height: 1040
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     x: 1830.6667
     y: 231.33334
     width: 413
     height: 1000
+<<<<<<< HEAD
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
+=======
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
@@ -626,24 +707,36 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 73.6
     width: 392
     height: 621
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     x: 197.33334
     y: 231.33334
     width: 404
     height: 597
+<<<<<<< HEAD
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
+=======
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: eec5ffff
       m_LastClickedID: 0
       m_ExpandedIDs: e4eefffff4eeffff02efffff48efffff7ef8fffffef9ffff282f0000342f00004a2f0000a62f0000c82f0000
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0afaffff4efaffff22fbffff
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
       m_SelectedIDs: 
       m_LastClickedID: 0
@@ -672,9 +765,12 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_WindowGUID: f4c8c361ac3a11a41994484695133e4e
 --- !u!114 &17
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
   m_WindowGUID: 01e46a2640cafb840a4901c3c5689f7a
 --- !u!114 &16
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
@@ -699,6 +795,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 394
     y: 20
     width: 1187
@@ -706,6 +803,15 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 5de6e7d2fb8fca9479f9e748f283edc3
+=======
+    x: 601.3334
+    y: 231.33334
+    width: 1227
+    height: 597
+  m_ViewDataDictionary: {fileID: 0}
+  m_ShowContextualTools: 0
+  m_WindowGUID: b03fcb8bfd9550145b4e48f8ae8576c8
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
     x: 601.3334
     y: 231.33334
@@ -724,9 +830,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 1.3064475, y: 0.3127773, z: -10.417969}
     speed: 2
     m_Value: {x: 1.3064475, y: 0.3127773, z: -10.417969}
+=======
+    m_Target: {x: 0, y: 0, z: 0}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
@@ -765,9 +877,15 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 19.674223
     speed: 2
     m_Value: 19.674223
+=======
+    m_Target: 10
+    speed: 2
+    m_Value: 10
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
     m_Target: 10
     speed: 2
@@ -819,15 +937,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 392
     y: 73.6
     width: 1189
     height: 621
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     x: 601.3334
     y: 231.33334
     width: 1227
     height: 597
+<<<<<<< HEAD
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
+=======
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
   m_ViewDataDictionary: {fileID: 0}
   m_VSyncEnabled: 0
@@ -842,15 +966,21 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -475.6
     m_HBaseRangeMax: 475.6
     m_VBaseRangeMin: -241.6
     m_VBaseRangeMax: 241.6
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     m_HBaseRangeMin: -409
     m_HBaseRangeMax: 409
     m_VBaseRangeMin: -193.33334
     m_VBaseRangeMax: 193.33334
+<<<<<<< HEAD
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
+=======
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
@@ -870,10 +1000,17 @@ MonoBehaviour:
       x: 0
       y: 17
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 1189
       height: 604
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 594.5, y: 302}
+=======
+      width: 1227
+      height: 580
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 613.5, y: 290}
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
       width: 1227
       height: 580
@@ -887,22 +1024,32 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: -594.5
       y: -302
       width: 1189
       height: 604
 =======
+=======
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
       x: -613.5
       y: -290
       width: 1227
       height: 580
+<<<<<<< HEAD
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
+=======
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1486.25, y: 776.25}
+=======
+  m_LastWindowPixelSize: {x: 1840.5, y: 895.5}
+>>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
 =======
   m_LastWindowPixelSize: {x: 1840.5, y: 895.5}
 >>>>>>> parent of 54eab5e... Merge branch 'master' of https://github.com/RessRyanT/TeamWont
