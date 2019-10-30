@@ -68,13 +68,7 @@ public class SpellManagerScript : MonoBehaviour
                 //Vector3 force = new Vector3(0, 100, 0);
                 //m_RigidBody2D.AddForce(force, ForceMode2D.Impulse);
                 Wizard wizard = Wizard.GetInstance();
-
-                Vector2 mousePositionWorld = Input.mousePosition;
-                mousePositionWorld = Camera.main.ScreenToWorldPoint(mousePositionWorld);
-                if(mousePositionWorld.y <= wizard.gameObject.transform.position.y && mousePositionWorld.x < wizard.gameObject.transform.position.x + 1f && mousePositionWorld.x > wizard.gameObject.transform.position.x - 1f)
-                {
-                    wizard.isJumping = true;
-                }
+                wizard.isJumping = true;
                 
 
                 
