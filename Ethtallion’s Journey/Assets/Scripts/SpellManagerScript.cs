@@ -54,7 +54,11 @@ public class SpellManagerScript : MonoBehaviour
             case 226: // Fireball
               
                 Debug.Log("Fireball Cast");
-                GameObject instFireball = Instantiate(fireball,wizardRef.transform);
+                GameObject instFireball = Instantiate(fireball, this.transform.position,Quaternion.identity);
+                if (this.GetComponentInParent<Wizard>().direction < 0)
+                {
+                    instFireball.GetComponent<FireBallScript>().SetLeft();
+                }
                 
                 break;
             case 232: // Gust

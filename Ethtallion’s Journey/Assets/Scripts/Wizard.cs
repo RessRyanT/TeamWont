@@ -11,7 +11,7 @@ public class Wizard : MonoBehaviour
     Vector2 velocity;
 
     //Direction
-    private float direction;
+    public float direction;
 
     //Stats
     public int health;
