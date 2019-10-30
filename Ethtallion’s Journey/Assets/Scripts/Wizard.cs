@@ -11,7 +11,7 @@ public class Wizard : MonoBehaviour
     Vector2 velocity;
 
     //Direction
-    private float direction;
+    public float direction;
 
     //Stats
     public int health;
@@ -175,7 +175,4 @@ public class Wizard : MonoBehaviour
 
         myRigidBody.MovePosition((Vector2)transform.position + new Vector2(0, 1f * Time.deltaTime * jumpSpeed) + new Vector2(velocity.magnitude * direction, 0) * Time.deltaTime);
     }
-
-
-
 }
