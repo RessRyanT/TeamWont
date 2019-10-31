@@ -56,9 +56,13 @@ public class SpellManagerScript : MonoBehaviour
 
     public void CastSpell(int spellID)
     {
+        Wizard wizard = Wizard.GetInstance();
+
         Debug.Log("Spell Manager casting spell " + spellID);
         switch (spellID)
         {
+
+                            
             case 226: // Fireball
                 Debug.Log("Fireball Cast");
                 GameObject instFireball = Instantiate(fireball, this.transform.position+(gameObject.GetComponentInParent<Wizard>().direction*fbxOffset+fbyOffset ), Quaternion.identity);
@@ -84,7 +88,6 @@ public class SpellManagerScript : MonoBehaviour
 
                 //Vector3 force = new Vector3(0, 100, 0);
                 //m_RigidBody2D.AddForce(force, ForceMode2D.Impulse);
-                Wizard wizard = Wizard.GetInstance();
                 wizard.isJumping = true;
                 
                 break;
