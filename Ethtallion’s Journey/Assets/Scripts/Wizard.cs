@@ -84,21 +84,7 @@ public class Wizard : MonoBehaviour
             mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
         }
 
-        //Gust behavior
-        if (isJumping)
-        {
-            if(jumpTick > 0)
-            {
-                Jump();
-                jumpTick -= Time.deltaTime;
-            }
-            else
-            {
-                isJumping = false;
-                jumpTick = 0;
-                jumpTick += jumpDuration;
-            }
-        }
+        
 
         //if lower than max speed, speed up, else use max speed
         if (velocity.magnitude < maxSpeed)
@@ -114,6 +100,25 @@ public class Wizard : MonoBehaviour
 
         velocity = velocity + modifier;
         myRigidBody.velocity = velocity;
+    }
+
+    private void FixedUpdate()
+    {
+        //Gust behavior
+        if (isJumping)
+        {
+            if (jumpTick > 0)
+            {
+                Jump();
+                jumpTick -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+                jumpTick = 0;
+                jumpTick += jumpDuration;
+            }
+        }
     }
 
     public void MovementModifier(Vector2 mod)
