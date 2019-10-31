@@ -71,14 +71,14 @@ public class Wizard : MonoBehaviour
         {
             //the level is completed. put tha code here
             sceneManagerObject.GetComponent<SceneMnger>().NextLevel();
-            Debug.Log("We hit it.");
+            // Debug.Log("We hit it.");
         }
 
 
         //When hit a wall, reduce speed and turn around
         if (DetectObs())
         {
-            Debug.Log("Obs");
+            // Debug.Log("Obs");
             speed = 0.5f;
             direction = -direction;
             mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
@@ -138,7 +138,7 @@ public class Wizard : MonoBehaviour
             return false;
         }
 
-        Debug.Log("Hit!");
+        // Debug.Log("Hit!");
         return true;
     }
 
@@ -160,7 +160,7 @@ public class Wizard : MonoBehaviour
             return false;
         }
 
-        Debug.Log("Grounded!");
+        // Debug.Log("Grounded!");
         return true;
     }
 
