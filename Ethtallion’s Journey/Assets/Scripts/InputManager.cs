@@ -15,7 +15,7 @@ public class InputManager : MonoBehaviour
         Fireball = 226, // red and red
         Gust = 232, // red and blue
         BlockShift = 214, // red and yellow
-        Shock = 220, // blue and yellow
+        Shock = 202, // blue and yellow
         InverseG = 333 // red blue and yellow
     }
 

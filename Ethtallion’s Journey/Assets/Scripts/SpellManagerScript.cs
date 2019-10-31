@@ -81,7 +81,7 @@ public class SpellManagerScript : MonoBehaviour
                 Debug.Log("BlockShift Cast");
                 
                 break;
-            case 220: // Shock
+            case 202: // Shock
                 
                 Debug.Log("Shock Cast");
                 //GameObject instLightning = Instantiate(lightning, wizardRef.transform.position, Quaternion.identity);
