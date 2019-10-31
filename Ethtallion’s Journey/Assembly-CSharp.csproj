@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ButtonHandler.cs" />
+     <Compile Include="Assets\Scripts\creditscript.cs" />
      <Compile Include="Assets\Scripts\Destructible.cs" />
      <Compile Include="Assets\Scripts\ElecTest.cs" />
      <Compile Include="Assets\Scripts\ElectricityManager.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\FireBallScript.cs" />
      <Compile Include="Assets\Scripts\InputManager.cs" />
      <Compile Include="Assets\Scripts\LightningScript.cs" />
+     <Compile Include="Assets\Scripts\QuitButton.cs" />
      <Compile Include="Assets\Scripts\SceneMnger.cs" />
      <Compile Include="Assets\Scripts\SpellManagerScript.cs" />
      <Compile Include="Assets\Scripts\Wizard.cs" />

@@ -6397,7 +6397,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Q
+  m_Text: Fire
 --- !u!222 &894153374
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6463,6 +6463,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergySwitch
       objectReference: {fileID: 0}
+    - target: {fileID: 4569183937285998354, guid: d80b299504032124f94d228c7a80a869,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 624062910}
     - target: {fileID: 5924701609563198768, guid: d80b299504032124f94d228c7a80a869,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6518,11 +6523,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4569183937285998354, guid: d80b299504032124f94d228c7a80a869,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 624062910}
     - target: {fileID: 4502803439518266229, guid: d80b299504032124f94d228c7a80a869,
         type: 3}
       propertyPath: m_SortingOrder
@@ -6756,11 +6756,6 @@ PrefabInstance:
       propertyPath: sceneManagerObject
       value: 
       objectReference: {fileID: 1318004870}
-    - target: {fileID: 6475478715484159775, guid: 8d59e4d808041d94e876e44e1e75e2d3,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 6475478715484159768, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
       propertyPath: m_Constraints
@@ -6780,6 +6775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BodyType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475478715484159775, guid: 8d59e4d808041d94e876e44e1e75e2d3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1490342126, guid: 8d59e4d808041d94e876e44e1e75e2d3, type: 3}
       propertyPath: m_LocalScale.x
@@ -6875,7 +6875,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: W
+  m_Text: Wind
 --- !u!222 &1495208085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7011,7 +7011,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: E
+  m_Text: Zap
 --- !u!222 &1568794651
 CanvasRenderer:
   m_ObjectHideFlags: 0
