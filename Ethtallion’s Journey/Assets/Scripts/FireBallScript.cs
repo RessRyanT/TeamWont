@@ -22,14 +22,14 @@ public class FireBallScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Destructable")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Destructable" || collision.gameObject.tag == "Fireball")
         {
             collision.collider.SendMessage("FireballHit", SendMessageOptions.DontRequireReceiver);
-            Debug.Log("Hit a wall or kirby");
+            // Debug.Log("Hit a wall or kirby");
         }
         else
         {
-            Debug.Log("Hit something else");
+            // Debug.Log("Hit something else");
             Destroy(gameObject);
         }
         // Debug.Log("I'm colliding");
@@ -38,6 +38,7 @@ public class FireBallScript : MonoBehaviour
 
     public void SetLeft()
     {
+        Debug.Log("SetLeft is run");
         myVelocity = new Vector3(-fireballSpeed, 0, 0);
     }
 

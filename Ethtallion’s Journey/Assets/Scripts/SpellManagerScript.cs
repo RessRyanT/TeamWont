@@ -55,8 +55,11 @@ public class SpellManagerScript : MonoBehaviour
               
                 Debug.Log("Fireball Cast");
                 GameObject instFireball = Instantiate(fireball, this.transform.position,Quaternion.identity);
-                if (this.GetComponentInParent<Wizard>().direction < 0)
+                instFireball.transform.position = new Vector3(gameObject.transform.position.x + 1.5f, gameObject.transform.position.y + 0.5f, gameObject.transform.position.z);
+                if (gameObject.GetComponentInParent<Wizard>().direction < 0)
                 {
+                    Debug.Log("Shold fire backwards");
+                    instFireball.GetComponent<SpriteRenderer>().flipX = true;
                     instFireball.GetComponent<FireBallScript>().SetLeft();
                 }
                 
