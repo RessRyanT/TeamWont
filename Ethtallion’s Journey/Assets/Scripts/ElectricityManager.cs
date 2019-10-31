@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ElectricityManager : MonoBehaviour
 {
-    public List<GameObject> stored;
+    public List<GameObject> stored = new List<GameObject>();
     bool active;
     int countdown;
     static int CD_MAX = 30;
@@ -14,6 +14,8 @@ public class ElectricityManager : MonoBehaviour
     CircleCollider2D wizradius;
     private void Start()
     {
+        
+
         timesCast =  0;
         countdown = CD_MAX;
         active = false;
@@ -28,7 +30,7 @@ public class ElectricityManager : MonoBehaviour
         {
             foreach (GameObject g in stored)
             {
-                if (wizradius.IsTouching(g.GetComponent<Collider2D>()))
+                if (g && wizradius.IsTouching(g.GetComponent<Collider2D>()))
                 {
                     g.SendMessage("OnZap", timesCast);
                 }

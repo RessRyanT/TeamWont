@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ButtonHandler.cs" />
      <Compile Include="Assets\Scripts\creditscript.cs" />
+     <Compile Include="Assets\Scripts\creditsscenemanager.cs" />
      <Compile Include="Assets\Scripts\Destructible.cs" />
      <Compile Include="Assets\Scripts\ElecTest.cs" />
      <Compile Include="Assets\Scripts\ElectricityManager.cs" />

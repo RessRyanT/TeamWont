@@ -13,6 +13,7 @@ public class FireBallScript : MonoBehaviour
         {
             myVelocity = new Vector3(value, 0, 0);
             myRigidBody.velocity = new Vector3(value, 0, 0);
+            
         }
     }
 

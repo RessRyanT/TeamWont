@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class creditscript : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class creditscript : MonoBehaviour
     {
         if(gameObject.transform.position.y >= 26)
         {
-            Application.Quit();
+            SceneManager.LoadScene(0);
         }
 
         Vector3 newPosition = gameObject.transform.position;

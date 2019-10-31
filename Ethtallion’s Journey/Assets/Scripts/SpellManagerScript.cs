@@ -10,9 +10,13 @@ public class SpellManagerScript : MonoBehaviour
     GameObject wizardRef;
     Wizard wizardScriptRef;
     Rigidbody2D m_RigidBody2D;
-    
 
-    
+    public AudioClip fireAudio;
+    public AudioClip gustAudio;
+    public AudioClip blinkAudio;
+    public AudioClip zapAudio;
+
+    public AudioSource audioSource;
 
     public GameObject lightning;
     public GameObject gust;
@@ -32,6 +36,7 @@ public class SpellManagerScript : MonoBehaviour
 
         colliders = new List<Collider2D>(GameObject.FindObjectsOfType<Collider2D>());
 
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -60,6 +65,9 @@ public class SpellManagerScript : MonoBehaviour
                 //instFireball.transform.position = new Vector3(gameObject.transform.position.x + 1.5f, gameObject.transform.position.y + 0.5f, gameObject.transform.position.z);
                 instFireball.GetComponent<FireBallScript>().SetVelocity = gameObject.GetComponentInParent<Wizard>().direction * 2;
 
+                audioSource.clip = fireAudio;
+                audioSource.Play();
+
                 /*f (gameObject.GetComponentInParent<Wizard>().direction < 0)
                 {
                     Debug.Log("Shold fire backwards");
@@ -71,12 +79,13 @@ public class SpellManagerScript : MonoBehaviour
                 
                 Debug.Log("Gust Cast");
 
+                audioSource.clip = gustAudio;
+                audioSource.Play();
+
                 //Vector3 force = new Vector3(0, 100, 0);
                 //m_RigidBody2D.AddForce(force, ForceMode2D.Impulse);
                 Wizard wizard = Wizard.GetInstance();
                 wizard.isJumping = true;
-                
-
                 
                 break;
             case 214: // BlockShift
@@ -85,7 +94,10 @@ public class SpellManagerScript : MonoBehaviour
                 
                 break;
             case 202: // Shock
-                
+
+                audioSource.clip = zapAudio;
+                audioSource.Play();
+
                 Debug.Log("Shock Cast");
                 //GameObject instLightning = Instantiate(lightning, wizardRef.transform.position, Quaternion.identity);
                 GetComponentInChildren<ElectricityManager>().WhenCast();
@@ -100,11 +112,14 @@ public class SpellManagerScript : MonoBehaviour
                 break;
 
             case 220: //I dont know what the color code would be but
-                //Blink
-                
+                      //Blink
+
+                audioSource.clip = blinkAudio;
+                audioSource.Play();
+
                 Vector2 newPosition = new Vector2(wizardRef.transform.position.x, wizardRef.transform.position.y);
                 Debug.Log(newPosition);
-                newPosition += new Vector2(5.0f, 0.2f);
+                newPosition += new Vector2(5.0f * wizardScriptRef.direction, 0.2f);
 
                 Debug.Log(newPosition);
 
@@ -120,16 +135,12 @@ public class SpellManagerScript : MonoBehaviour
                 {
                     Vector3 tempvec = new Vector3(newPosition.x, newPosition.y, 2.0f);
                     wizardRef.transform.position = tempvec;
+
                 }
                 else
                 {
                     Debug.Log("Invalid Tele");
                 }
-                
-
-               
-
-                 
                 
 
                 break;

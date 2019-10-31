@@ -27,10 +27,19 @@ public class SceneMnger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if(kirby.transform.position.y > 20 || kirby.transform.position.y < -20 || Input.GetKeyDown(KeyCode.R))
+        if (kirby)
         {
-            SceneManager.LoadScene(currentSceneIndex);
-            
+            if (kirby.transform.position.y > 20 || kirby.transform.position.y < -20 || Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(currentSceneIndex);
+            }
+        }
+
+        
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
         }
 
     }
