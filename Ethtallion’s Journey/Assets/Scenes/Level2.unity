@@ -506,7 +506,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.4069533
+  orthographic size: 5.426386
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -538,7 +538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104676852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.79, y: -2.34, z: -10}
+  m_LocalPosition: {x: -1.64, y: -2.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -710,6 +710,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6475478715484159775, guid: 8d59e4d808041d94e876e44e1e75e2d3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d59e4d808041d94e876e44e1e75e2d3, type: 3}
 --- !u!1 &480515516
@@ -722,7 +727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 480515518}
   - component: {fileID: 480515517}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: background2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480515516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8, y: -2.33, z: 5}
+  m_LocalPosition: {x: -1.8, y: -2.06, z: 10}
   m_LocalScale: {x: 0.7267937, y: 0.48312, z: 0.5856}
   m_Children: []
   m_Father: {fileID: 0}
@@ -876,7 +881,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.13999999, y: 0.13999999, z: 0}
   m_MaxChunkCount: 16
@@ -2379,6 +2384,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5475140788435996136, guid: 4b9328816c568f04a9c4a97a10177c26,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b9328816c568f04a9c4a97a10177c26, type: 3}
 --- !u!1 &1735324949
@@ -2463,7 +2473,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743708750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.23, y: -4.45, z: 0}
+  m_LocalPosition: {x: -3.23, y: -4.58, z: 0}
   m_LocalScale: {x: 20.500315, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1913875953}
@@ -2880,7 +2890,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!224 &2029281705
 RectTransform:
@@ -2970,6 +2980,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475140788435996136, guid: 4b9328816c568f04a9c4a97a10177c26,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b9328816c568f04a9c4a97a10177c26, type: 3}
