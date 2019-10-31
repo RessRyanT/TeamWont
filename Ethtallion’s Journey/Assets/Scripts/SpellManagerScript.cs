@@ -17,6 +17,8 @@ public class SpellManagerScript : MonoBehaviour
     public GameObject lightning;
     public GameObject gust;
     public GameObject fireball;
+    private Vector3 fbxOffset = new Vector3(1.5f, 0, 0);
+    private Vector3 fbyOffset = new Vector3(0, 0.5f, 0);
 
 
     List<Collider2D> colliders;
@@ -46,22 +48,23 @@ public class SpellManagerScript : MonoBehaviour
         InverseG = 333 // red blue and yellow
     */
 
+
     public void CastSpell(int spellID)
     {
         Debug.Log("Spell Manager casting spell " + spellID);
         switch (spellID)
         {
             case 226: // Fireball
-              
                 Debug.Log("Fireball Cast");
-                GameObject instFireball = Instantiate(fireball, this.transform.position,Quaternion.identity);
-                instFireball.transform.position = new Vector3(gameObject.transform.position.x + 1.5f, gameObject.transform.position.y + 0.5f, gameObject.transform.position.z);
-                if (gameObject.GetComponentInParent<Wizard>().direction < 0)
+                GameObject instFireball = Instantiate(fireball, this.transform.position+(gameObject.GetComponentInParent<Wizard>().direction*fbxOffset+fbyOffset ), Quaternion.identity);
+                //instFireball.transform.position = new Vector3(gameObject.transform.position.x + 1.5f, gameObject.transform.position.y + 0.5f, gameObject.transform.position.z);
+                instFireball.GetComponent<FireBallScript>().SetVelocity = gameObject.GetComponentInParent<Wizard>().direction * 2;
+
+                /*f (gameObject.GetComponentInParent<Wizard>().direction < 0)
                 {
                     Debug.Log("Shold fire backwards");
                     instFireball.GetComponent<SpriteRenderer>().flipX = true;
-                    instFireball.GetComponent<FireBallScript>().SetLeft();
-                }
+                }*/
                 
                 break;
             case 232: // Gust
