@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4968740206541267760}
   - component: {fileID: 6016585048474681000}
   - component: {fileID: 1099214786488454845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: metaldoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

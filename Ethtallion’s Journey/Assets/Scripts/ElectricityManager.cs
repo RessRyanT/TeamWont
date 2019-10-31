@@ -9,6 +9,7 @@ public class ElectricityManager : MonoBehaviour
     int countdown;
     static int CD_MAX = 30;
     public int timesCast;
+    ParticleSystem particles;
 
     CircleCollider2D wizradius;
     private void Start()
@@ -17,6 +18,8 @@ public class ElectricityManager : MonoBehaviour
         countdown = CD_MAX;
         active = false;
         wizradius = gameObject.GetComponent<CircleCollider2D>();
+        particles = GetComponent<ParticleSystem>();
+        
     }
 
     private void Update()
@@ -36,6 +39,7 @@ public class ElectricityManager : MonoBehaviour
         {
             active = false;
             countdown = CD_MAX;
+            particles.Stop();
         }
     }
 
@@ -46,6 +50,7 @@ public class ElectricityManager : MonoBehaviour
         {
             active = true;
             timesCast++;
+            particles.Play();
         }
     }
 
