@@ -6756,6 +6756,11 @@ PrefabInstance:
       propertyPath: sceneManagerObject
       value: 
       objectReference: {fileID: 1318004870}
+    - target: {fileID: 6475478715484159775, guid: 8d59e4d808041d94e876e44e1e75e2d3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6475478715484159768, guid: 8d59e4d808041d94e876e44e1e75e2d3,
         type: 3}
       propertyPath: m_Constraints
@@ -6775,11 +6780,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BodyType
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6475478715484159775, guid: 8d59e4d808041d94e876e44e1e75e2d3,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1490342126, guid: 8d59e4d808041d94e876e44e1e75e2d3, type: 3}
       propertyPath: m_LocalScale.x
@@ -7238,7 +7238,17 @@ PrefabInstance:
     - target: {fileID: 4968740206541267760, guid: 949afac84d13a6e4590cf17adce501f2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6151925
+      value: 1.0160519
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968740206541267760, guid: 949afac84d13a6e4590cf17adce501f2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.37780184
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968740206541267760, guid: 949afac84d13a6e4590cf17adce501f2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6516
       objectReference: {fileID: 0}
     - target: {fileID: 6016585048474681000, guid: 949afac84d13a6e4590cf17adce501f2,
         type: 3}
