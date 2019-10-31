@@ -15,8 +15,9 @@ public class InputManager : MonoBehaviour
         Fireball = 226, // red and red
         Gust = 232, // red and blue
         BlockShift = 214, // red and yellow
-        Shock = 202, // blue and yellow
-        InverseG = 333 // red blue and yellow
+        Shock = 202, // yellow and yellow
+        InverseG = 333, // red blue and yellow
+        Blink = 220 // blue and yellow
     }
 
     // q is red
@@ -112,6 +113,11 @@ public class InputManager : MonoBehaviour
             case SpellName.InverseG:
                 TransferSpell((int)SpellName.InverseG);
                 Debug.Log("InverseG");
+                ResetKeyVal();
+                break;
+            case SpellName.Blink:
+                TransferSpell((int)SpellName.Blink);
+                Debug.Log("Blink");
                 ResetKeyVal();
                 break;
             default:

@@ -42,7 +42,7 @@ public class SpellManagerScript : MonoBehaviour
         Fireball = 226, // red and red
         Gust = 232, // red and blue
         BlockShift = 214, // red and yellow
-        Shock = 220, // blue and yellow
+        Shock = 220, // yellow and yellow
         InverseG = 333 // red blue and yellow
     */
 
@@ -93,22 +93,27 @@ public class SpellManagerScript : MonoBehaviour
 
                 break;
 
-            case 111: //I dont know what the color code would be but
+            case 220: //I dont know what the color code would be but
                 //Blink
+                
+                Vector2 newPosition = new Vector2(wizardRef.transform.position.x, wizardRef.transform.position.y);
+                Debug.Log(newPosition);
+                newPosition += new Vector2(5.0f, 0.2f);
 
-                Vector3 newPosition = wizardRef.transform.position;
-                newPosition.x += 1;
+                Debug.Log(newPosition);
 
                 bool valid = true;
                 
                 foreach(Collider2D c in colliders)
                 {
+
                     if (c.OverlapPoint(newPosition)) valid = false;
                 }
 
                 if (valid)
                 {
-                    wizardRef.transform.position = newPosition;
+                    Vector3 tempvec = new Vector3(newPosition.x, newPosition.y, 2.0f);
+                    wizardRef.transform.position = tempvec;
                 }
                 else
                 {
